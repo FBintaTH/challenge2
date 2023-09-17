@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gestion des Tâches</title>
+</head>
+<body>
+    <header>
+        <h1>Gestion des Tâches</h1>
+    </header>
+    <main>
+        <section class="task-form">
+            <!-- Formulaire pour ajouter une nouvelle tâche -->
+            <h2>Ajouter une Tâche</h2>
+            <form id="task-form">
+                <!-- <label for="title">Titre :</label>
+                <input type="text" id="title" required> -->
+                <label for="title">Titre :</label>
+                <input type="text" id="title" required>
+                <label for="description">Description :</label>
+                <textarea id="description" required></textarea>
+                <label for="deadline">Date limite :</label>
+                <input type="date" id="deadline" required>
+                <label for="priority">Priorité :</label>
+                <select id="priority">
+                    <option value="Faible">Faible</option>
+                    <option value="Moyenne">Moyenne</option>
+                    <option value="Forte">Forte</option>
+                </select>
+                <button id="btnAjouter" type="submit">Ajouter</button>
+            </form>
+        </section>
+        <section class="task-list" id="task-form-list" hidden>
+            <!-- Liste des tâches -->
+            <h2>Liste des Tâches</h2>
+            <ul id="task-list">
+                <!-- Les tâches seront ajoutées ici dynamiquement en JavaScript -->
+            </ul>
+        </section>
+        <section class="task-details" id="task-details-hidden" hidden>
+            <!-- Détails de la tâche sélectionnée -->
+            <h2>Détails de la Tâche</h2>
+            <div id="task-details">
+                <!-- Les détails de la tâche sélectionnée seront affichés ici dynamiquement en JavaScript -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
